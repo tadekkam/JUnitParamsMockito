@@ -2,11 +2,11 @@ package task1;
 
 public class Validation {
     public static void main(String[] args) {
-        System.out.println(isModulo(5));
+        System.out.println(isDivisibleByTwo(5));
         System.out.println(sumOfDigits(556));
     }
 
-    public static boolean isModulo(int number) {
+    public static boolean isDivisibleByTwo(int number) {
         return number % 2 == 0;
     }
 
