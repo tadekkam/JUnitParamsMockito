@@ -14,7 +14,7 @@ class SeasonsTest {
     @ValueSource(ints = {12, 1, 2})
     void testDetectSeasonForWinter(int monthValue) {
         Month month = Month.of(monthValue);
-        assertEquals(Seasons.SeasonsOfDeclare.Season.WINTER, detectSeason(month));
+        assertEquals(Seasons.Season.WINTER, detectSeason(month));
     }
 
 
