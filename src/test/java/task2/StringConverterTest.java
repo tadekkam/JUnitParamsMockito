@@ -6,20 +6,29 @@ import org.junit.jupiter.params.provider.NullAndEmptySource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static task2.StringConverter.*;
+
 class StringConverterTest {
 
     @ParameterizedTest
-    @NullAndEmptySource
     @ValueSource(strings = {"string", "CoNvERter", "TeSt", "789321", "!@#$%/\\"})
-    void convertToUpperTest(String input) {
+    void testTransformToUpperCase(String input) {
         String expected = input.toUpperCase();
-        String result = StringConverter.convertToUpper(input);
+        String result = convertToUpper(input);
         assertEquals(expected, result);
     }
 
-    @Test
-    void convertToUpperTestNull() {
-        assertNull(StringConverter.convertToUpper(null));
+    @ParameterizedTest
+    @NullAndEmptySource
+    void testTransformToUpperCaseWithNullAndEmpty(String input) {
+        assertNull(convertToUpper(input));
     }
 
 }
+
+
+
+
+
+
+
